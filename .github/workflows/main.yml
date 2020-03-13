@@ -1,3 +1,17 @@
+name: JIRA Reference Verifier
+on: [pull-request]
+
+jobs:
+  check:
+    name: Check PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        uses: actions/checkout@v1
+        uses: rpm1984/jira-ref-gh-action-test@v1
+            with:
+                project-name: 'HDW'              
+
 name: 'JIRA Reference Verifier'
 on:
     pull-request:
@@ -10,4 +24,4 @@ jobs:
             - uses: actions/checkout@v1
               uses: rpm1984/jira-ref-gh-action-test@v1
                 with:
-                    project-name: 'HDW'
+                    
