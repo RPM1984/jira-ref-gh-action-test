@@ -8,5 +8,5 @@ jobs:
     steps:
         - uses: actions/checkout@v1
         - uses: rpm1984/jira-ref-gh-action-test@master
-            with:
-                project-name: 'HDW'
+          with:
+             project-name: 'HDW'
