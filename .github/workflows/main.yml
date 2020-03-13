@@ -1,0 +1,13 @@
+name: 'JIRA Reference Verifier'
+on:
+    pull-request:
+        types:
+            - opened
+jobs:
+    publish:
+        runs-on: ubuntu-18.04
+        steps:
+            - uses: actions/checkout@v1
+            - uses: rpm1984/jira-ref-gh-action-test@v1
+            with:
+                project-name: 'HDW'
